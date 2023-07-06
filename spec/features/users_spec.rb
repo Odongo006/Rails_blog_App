@@ -62,6 +62,10 @@ RSpec.describe 'Users', type: :feature do
       expect(page).to have_current_path(user_post_path(user_id: @user2.id, id: @user2.posts.first.id))
     end
 
+    it "displays a button that lets me view all of a user's posts" do
+      expect(page).to have_button('See all posts')
+    end
+
     it "redirects me to the user's post index page when clicking 'See all posts'" do
       click_link 'See all posts'
       expect(page).to have_current_path(user_posts_path(@user2))
