@@ -4,7 +4,7 @@
       <img src="<%= user.photo %>" alt="User Photo">
     </div>
     <div class="user-details">
-      <%= link_to user_url(user), class: 'name' do %>
+      <%= link_to user_url(user), id: "user-link-#{user.id}", class: 'name' do %>
         <%= user.name %>
       <% end %>
       <p class="posts-no">

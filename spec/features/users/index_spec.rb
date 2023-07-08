@@ -8,7 +8,8 @@ describe 'testing users/index', type: :feature do
 
     @user2 = User.create(name: 'Larissa', photo: 'www.unsplash.com', bio: 'Bee keeper and bee lover', posts_counter: 2)
 
-    @user3 = User.create(name: 'Burak', photo: 'www.unsplash.com', bio: 'Software developer from Turkey', posts_counter: 2)
+    @user3 = User.create(name: 'Burak', photo: 'www.unsplash.com', bio: 'Software developer from Turkey',
+                         posts_counter: 2)
 
     @users = User.all
     visit users_path

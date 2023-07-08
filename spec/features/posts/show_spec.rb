@@ -10,7 +10,7 @@ RSpec.describe 'User Posts', type: :feature do
 
     visit user_posts_path(@user)
   end
-  
+
   describe 'Show Page' do
     before do
       @comment2 = Comment.create!(text: 'Great post', author: @user, post: @post1)
