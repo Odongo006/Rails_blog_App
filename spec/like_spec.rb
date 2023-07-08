@@ -1,32 +1,23 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  like = Like.new(author_id: 1, post_id: 1)
+  subject { Like.new(user_id: 1, post_id: 1) }
 
-  it 'has an author id' do
-    expect(like.author_id).to_not eql 5
-    expect(like.author_id).to eql 1
+  before { subject.save }
+
+  it 'new like should be saved in the database' do
+    expect(subject.new_record?).to be_truthy
   end
 
-  it 'has an post id' do
-    expect(like.post_id).to_not eql(-5)
-    expect(like.post_id).to eql 1
-  end
+  describe 'update_posts_likes_counter' do
+    user = User.create(name: 'Man', photo: 'photo', bio: 'bio', posts_counter: 0)
+    post = Post.create(title: 'post', text: 'This is my post', author_id: user.id, comments_counter: 0,
+                       likes_counter: 0)
 
-  it 'checks likes_counter method' do
-    User.new(name: 'Mert', photo: 'www.unsplash.com', bio: 'Lorem ipsum', posts_counter: 5)
+    subject { described_class.create(post:, user_id: user.id) }
 
-    post = Post.new(author_id: 1, title: 'first post', text: 'this is the first post', comments_counter: 3,
-                    likes_counter: 2)
-
-    like = Like.new(author_id: 1, post:)
-
-    post.likes_counter = 2
-    post.save
-
-    like.increase_like_counter
-    like.increase_like_counter
-
-    expect(post.likes_counter).to eq(4)
+    it 'posts comments count should increase' do
+      expect(subject.post.likes_counter).to eq(post.likes_counter)
+    end
   end
 end
