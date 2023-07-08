@@ -1,51 +1,43 @@
 require 'rails_helper'
 
-describe User, type: :request do
+describe Post, type: :request do
+  let(:user) { User.create!(name: 'Toro', posts_counter: 0) }
+  let(:post) do
+    Post.create!(title: 'Rails', text: 'Rails is magic', author: user,
+                 comments_counter: 0, likes_counter: 0)
+  end
+
   describe 'GET /index' do
     it 'returns a successful response' do
-      User.create!(name: 'John', posts_counter: 0)
-      User.create!(name: 'Jane', posts_counter: 0)
-
-      get users_url
+      get user_posts_url(user.id)
       expect(response).to have_http_status(200)
     end
     it 'renders the correct template' do
-      User.create!(name: 'John', posts_counter: 0)
+      get user_posts_url(user.id)
 
-      get users_url
-
-      expect(response).to render_template('users/index')
+      expect(response).to render_template('posts/index')
     end
     it 'response body displays correct placeholder text' do
-      User.create!(name: 'John', posts_counter: 0)
+      get user_posts_url(user.id)
 
-      get users_url
-
-      expect(response.body).to include('Listing Users')
+      expect(response.body).to include('Pagination')
     end
   end
 
   describe 'GET /show' do
-    let(:valid_attributes) do
-      { name: 'John Doe', posts_counter: 0 }
-    end
-
-    it 'renders a successful response' do
-      user = User.create! valid_attributes
-      get user_url(user)
+    it 'returns a successful response' do
+      get user_post_url(user_id: user.id, id: post.id)
       expect(response).to have_http_status(200)
     end
-
     it 'renders the correct template' do
-      user = User.create! valid_attributes
-      get user_url(user)
-      expect(response).to render_template('users/show')
-    end
+      get user_post_url(user_id: user.id, id: post.id)
 
+      expect(response).to render_template('posts/show')
+    end
     it 'response body displays correct placeholder text' do
-      user = User.create! valid_attributes
-      get user_url(user)
-      expect(response.body).to include('Showing a specific User')
+      get user_post_url(user_id: user.id, id: post.id)
+
+      expect(response.body).to include('Add comment')
     end
   end
 end
