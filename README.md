@@ -78,7 +78,7 @@ Install this project with:
 
 ### Usage
 
-To run the project, execute the following command:
+To run this project, execute the following command:
 
 <ul>
 <li>rails server</li>
