@@ -81,7 +81,7 @@ Install this project with:
 To run the project, execute the following command:
 
 <ul>
-<li>rails server</li>
+<li>rails server </li>
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
