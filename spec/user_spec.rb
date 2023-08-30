@@ -7,7 +7,7 @@ RSpec.describe User, type: :model do
   describe 'validations' do
     it 'validates presence of name' do
       subject.name = nil
-  
+      expect(subject).to_not be_valid
     end
 
     it 'validates numericality of posts_counter' do
