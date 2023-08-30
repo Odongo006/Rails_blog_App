@@ -88,7 +88,7 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Kevin Toro**
+👤 **Henry Omondi**
 - GitHub: [@Odongo006](https://github.com/Odongo006)
 - Twitter: [@HenryOdongo](https://twitter.com/@HenryOdongo007)
 - LinkedIn: [@HenryOdongo](https://www.linkedin.com/in/henry-odongo/)
