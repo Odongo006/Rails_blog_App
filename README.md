@@ -93,6 +93,13 @@ To run the project, execute the following command:
 - Twitter: [@HenryOdongo](https://twitter.com/@HenryOdongo007)
 - LinkedIn: [@HenryOdongo](https://www.linkedin.com/in/henry-odongo/)
 
+👤 **Syed Atril**
+
+- GitHub: [@githubhandle](https://github.com/Atril33)
+- Twitter: [@twitterhandle](https://twitter.com/AtrilSyed)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/syed-atril-831696248/)
+- Facebook [Facebook](https://web.facebook.com/profile.php?id=100073724910623)
+- 
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Authentication
