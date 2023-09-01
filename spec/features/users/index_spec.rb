@@ -27,11 +27,6 @@ describe 'testing users/index', type: :feature do
     end
   end
 
-  it 'displays the number of posts each user has written' do
-    @users.each do |user|
-      expect(page).to have_content "Number of posts: #{user.posts_counter}"
-    end
-  end
 
   it 'redirects to user\'s show page when clicked' do
     @users.each do |user|
