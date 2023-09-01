@@ -4,8 +4,6 @@ RSpec.describe 'User Posts', type: :feature do
   before do
     @user = User.create!(name: 'Toro', posts_counter: 0)
     @post1 = Post.create!(title: 'Post 1', text: 'This is post 1', author: @user, comments_counter: 0, likes_counter: 0)
-    @post2 = Post.create!(title: 'Post 2', text: 'This is post 2', author: @user, comments_counter: 0, likes_counter: 0)
-    @post3 = Post.create!(title: 'Post 3', text: 'This is post 3', author: @user, comments_counter: 0, likes_counter: 0)
     @comment = Comment.create!(text: 'Nice post', author: @user, post: @post1)
 
     visit user_posts_path(@user)
