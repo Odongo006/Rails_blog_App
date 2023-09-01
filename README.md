@@ -87,12 +87,19 @@ To run the project, execute the following command:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
+👤 **Henry Odongo**
 
-👤 **Kevin Toro**
-- GitHub: [@Odongo006](https://github.com/Odongo006)
-- Twitter: [@HenryOdongo](https://twitter.com/@HenryOdongo007)
-- LinkedIn: [@HenryOdongo](https://www.linkedin.com/in/henry-odongo/)
+- GitHub: [@githubhandle](https://github.com/Odongo006)
+- Twitter: [@twitterhandle](https://twitter.com/HenryOdongo007)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/henry-odongo/)
 
+ 👤 **Syed Atril**
+
+- GitHub: [@githubhandle](https://github.com/Atril33)
+- Twitter: [@twitterhandle](https://twitter.com/AtrilSyed)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/syed-atril-831696248/)
+- Facebook [Facebook](https://web.facebook.com/profile.php?id=100073724910623)
+- 
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Authentication
