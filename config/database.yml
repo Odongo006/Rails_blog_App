@@ -32,7 +32,7 @@ development:
   username: postgres
 
   # The password associated with the postgres role (username).
-  password: HenryDB
+  password: 54321
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -57,9 +57,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: railsblogdb
+  database: railsblogdb_test
   username: postgres
-  password: HenryDB
+  password: 54321
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -83,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: railsblogdb
+  database: railsblogdb_production
   username: postgres
-  password: HenryDB
+  password: 54321
